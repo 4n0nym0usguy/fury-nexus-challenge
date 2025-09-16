@@ -27,7 +27,7 @@ const Header = () => {
           
           <div className="flex items-center space-x-4">
             <NexusButton variant="ghost" size="sm">
-              <a href="/dashboard">Dashboard</a>
+              Sign In
             </NexusButton>
             <NexusButton size="sm">
               Get Started
