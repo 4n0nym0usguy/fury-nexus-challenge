@@ -2,95 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* NEXUS Design System - Dark tech theme with purple accents and glass-morphism 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* NEXUS Color Palette */
+    --nexus-dark: 231 20% 9%;
+    --nexus-darker: 231 25% 6%;
+    --nexus-navy: 229 24% 12%;
+    --nexus-blue: 226 31% 18%;
+    
+    --nexus-purple: 258 78% 66%;
+    --nexus-purple-light: 258 78% 76%;
+    --nexus-purple-dark: 258 78% 56%;
+    
+    --nexus-glass: 231 20% 15%;
+    --nexus-glass-border: 258 30% 35%;
+    
+    --nexus-text: 210 20% 85%;
+    --nexus-text-muted: 210 15% 65%;
+    --nexus-text-light: 0 0% 100%;
+    
+    /* Semantic tokens */
+    --background: var(--nexus-dark);
+    --foreground: var(--nexus-text-light);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: var(--nexus-glass);
+    --card-foreground: var(--nexus-text-light);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: var(--nexus-glass);
+    --popover-foreground: var(--nexus-text-light);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--nexus-purple);
+    --primary-foreground: var(--nexus-text-light);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--nexus-navy);
+    --secondary-foreground: var(--nexus-text);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--nexus-blue);
+    --muted-foreground: var(--nexus-text-muted);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--nexus-purple-light);
+    --accent-foreground: var(--nexus-text-light);
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 60.6%;
+    --destructive-foreground: var(--nexus-text-light);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: var(--nexus-glass-border);
+    --input: var(--nexus-glass);
+    --ring: var(--nexus-purple);
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--nexus-purple)), hsl(var(--nexus-purple-light)));
+    --gradient-glass: linear-gradient(135deg, 
+      hsla(var(--nexus-glass), 0.8), 
+      hsla(var(--nexus-glass-border), 0.4));
+    --gradient-hero: linear-gradient(135deg, 
+      hsl(var(--nexus-dark)), 
+      hsl(var(--nexus-navy)));
+    
+    /* Shadows */
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 40px hsla(var(--nexus-purple), 0.3);
+    --shadow-purple: 0 10px 30px hsla(var(--nexus-purple), 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
+}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-lg border border-border/30 rounded-2xl;
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-glass {
+    background: var(--gradient-glass);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .nexus-logo {
+    filter: drop-shadow(var(--shadow-glow));
   }
 }
 
