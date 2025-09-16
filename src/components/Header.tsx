@@ -5,7 +5,10 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/20">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-3">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 mb-4 shadow-lg">
+                <i class='bx bx-network-chart text-white text-3xl'></i>
+            </div>
             <div>
               <h1 className="text-xl font-bold text-gradient">NEXUS</h1>
               <p className="text-xs text-muted-foreground">Secure Access Portal</p>
