@@ -7,7 +7,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
+            <div className="flex items-center space-x-3 mb-6">
+              <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 mb-4 shadow-lg">
+                <i class='bx bx-network-chart text-white text-3xl'></i>
+              </div>
               <div>
                 <h3 className="text-xl font-bold text-gradient">NEXUS</h3>
                 <p className="text-sm text-muted-foreground">Secure Access Portal</p>
