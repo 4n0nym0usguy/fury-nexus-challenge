@@ -1,5 +1,4 @@
 import { Github, Twitter, Linkedin, Mail } from "lucide-react"
-import nexusLogo from "@/assets/nexus-logo.png"
 
 const Footer = () => {
   return (
@@ -8,12 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src={nexusLogo} 
-                alt="NEXUS Logo" 
-                className="w-10 h-10 nexus-logo"
-              />
+            <div className="flex items-center space-x-2 mb-6">
               <div>
                 <h3 className="text-xl font-bold text-gradient">NEXUS</h3>
                 <p className="text-sm text-muted-foreground">Secure Access Portal</p>
