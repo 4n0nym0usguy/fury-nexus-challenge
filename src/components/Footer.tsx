@@ -68,7 +68,7 @@ const Footer = () => {
         
         <div className="border-t border-border/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
           <p className="text-muted-foreground text-sm">
-            © 2024 NEXUS. All rights reserved.
+            © 2025 NEXUS. All rights reserved.
           </p>
           
           <div className="flex space-x-6 mt-4 md:mt-0">
