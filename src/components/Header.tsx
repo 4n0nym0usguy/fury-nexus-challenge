@@ -21,10 +21,10 @@ const Header = () => {
           
           <div className="flex items-center space-x-4">
             <NexusButton variant="ghost" size="sm">
-              Sign In
+              <a href="/auth/login.html">Sign In</a>
             </NexusButton>
             <NexusButton size="sm">
-              Get Started
+              <a href="/auth/signup.html">Get Started</a>
             </NexusButton>
           </div>
         </div>
