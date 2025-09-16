@@ -91,3 +91,8 @@
                 this.classList.remove('animate__animated', 'animate__pulse');
             });
         });
+	//redirect to login
+		const logo = document.querySelector("#logo");
+        logo.addEventListener('click', ()=>{
+            window.location = 'https://fury-nexus-challenge.vercel.app/';
+        })
